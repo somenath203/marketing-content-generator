@@ -12,4 +12,4 @@ https://github.com/user-attachments/assets/e7dd043e-de98-4174-b116-c9040cbbef29
 
 # Note
 
-The user is not responsible for any type of content produced by the model.
+The creator of this application is not responsible for any type of content produced by the chatbot. Users are advised to use this application responsibly and be aware of the potential for generating unintended or inappropriate content.
