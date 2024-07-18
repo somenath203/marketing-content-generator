@@ -1,6 +1,6 @@
 # Marketing Content Generator
 
-This repository contains a Streamlit-based application designed to generate marketing content. The application uses **Langchain** and **Open Source Meta's Llama-3-8B-Instruct** to create engaging and relevant marketing copy based on user input and the content type.
+This repository contains a Streamlit-based application designed to generate marketing content. The application uses **Langchain** and **Open Source Meta's Llama-3-8B-Instruct Large language Model** to create engaging and relevant marketing copy based on user input and the content type.
 
 # Deployed URL
 
