@@ -24,7 +24,9 @@ st.set_page_config(
 st.header('Marketing Content Generator')
 
 
-user_input = st.text_input('Enter the name of the product')
+user_product_name_input = st.text_input('Enter the name of the product')
+
+user_product_description_input = st.text_area('Enter the description of the product', height=275)
 
 
 tasktype_option = st.selectbox(
@@ -38,21 +40,26 @@ submit = st.button('Generate Content')
 
 if submit:
 
-    if user_input:
+    if user_product_name_input and user_product_description_input:
 
         prompt_template = PromptTemplate(
             template="""
             You are a helpful assistant. Perform the task according to the type: {tasktype_option} on the name of 
-            of the product: {userInput} and only write to the point answer, not any useless information and if needed, use emojis wherever required. 
+            of the product: {user_product_name_input} and the description of the product: {user_product_description_input}. Generate to the point answer, not any useless information and if needed, use emojis wherever required. 
             And atlast, tell user this thing like feel free to modify the {tasktype_option} according to your need".
+            And last thing, don't generate same information multiple times. 
             """,
-            input_variables=["tasktype_option", "userInput"]
+            input_variables=["tasktype_option", "user_product_name_input", "user_product_description_input"]
         )
 
-        response = llm_model.invoke(prompt_template.format(tasktype_option=tasktype_option, userInput=user_input))
+        with st.spinner('Generating Content...'):
 
-        st.markdown(response)
+            response = llm_model.invoke(prompt_template.format(tasktype_option=tasktype_option, user_product_name_input=user_product_name_input, user_product_description_input=user_product_description_input))
+
+            st.success('Content generated successfully')
+
+            st.markdown(response)
 
     else:
 
-        st.error('Please enter your input')
+        st.error('Please fill both the input fields')
