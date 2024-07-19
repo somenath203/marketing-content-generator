@@ -8,7 +8,7 @@ https://marketing-content-generator.streamlit.app/
 
 # Demo Video of the Application
 
-https://github.com/user-attachments/assets/e7dd043e-de98-4174-b116-c9040cbbef29
+https://github.com/user-attachments/assets/8aab2732-f8e6-4453-ab03-acf6b40ba826
 
 # Note
 
