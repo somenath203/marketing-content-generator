@@ -47,7 +47,8 @@ if submit:
             You are a helpful assistant. Perform the task according to the type: {tasktype_option} on the name of 
             of the product: {user_product_name_input} and the description of the product: {user_product_description_input}. Generate to the point answer, not any useless information and if needed, use emojis wherever required. 
             And atlast, tell user this thing like feel free to modify the {tasktype_option} according to your need".
-            And last thing, don't generate same information multiple times. 
+            If the information required to generate a particular is less, then, ask for more information.
+            And last thing, don't repeat same information multiple times. 
             """,
             input_variables=["tasktype_option", "user_product_name_input", "user_product_description_input"]
         )
